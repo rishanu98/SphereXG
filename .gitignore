@@ -1,0 +1,3 @@
+project_cache.db
+*.pyc
+__pycache__/

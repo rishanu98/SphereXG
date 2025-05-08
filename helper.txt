@@ -1,0 +1,24 @@
+# Using Docker Compose to build the image
+
+--> docker-compose build  # to build from scratch
+--> docker-compose build cli or api # to build cli or api service
+
+
+# Using Docker-Compose to run cli/api
+
+--> docker-compose up api # to work with api server
+--> docker-compose run cli downloader intilalize <project_id>
+--> docker-compose run cli downloader query <Query>
+--> docker-compose run cli downloader download-all  ## to download the from all URLs in DB
+
+project id - d1691aff-5bfb-4786-bc79-9a00d1d35189
+query_1 - SELECT uri FROM iElements
+query_2 - SELECT uri FROM iElements WHERE uri IS NOT NULL AND type = 'Group'
+
+# using Docker-compose to run api
+
+--> docker-compose up api
+
+# to install tool in Python env
+
+--> pip install .

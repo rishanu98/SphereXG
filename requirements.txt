@@ -1,0 +1,10 @@
+requests
+fastapi-sessions
+fastapi
+uvicorn
+click
+SQLModel
+pydantic
+SQLAlchemy
+
+

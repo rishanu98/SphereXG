@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  cli:
+    build: .
+    container_name: downloader-cli
+    #command: downloader 
+    volumes:
+      - .:/app
+
+  api:
+    build: .
+    container_name: downloader-api
+    command: uvicorn api:app --host 0.0.0.0 --port 80 --reload
+    ports:
+      - 8000:80  # Expose the API on port 8080. it is at port 80 in the container
+    volumes:
+      - .:/app
